@@ -2,34 +2,43 @@ var gulp = require('gulp'),
     stylus = require('gulp-stylus'),
     autoprefix = require('gulp-autoprefixer'),
     rupture = require('rupture'),
-    bs = require('browser-sync').create();
+    bs = require('browser-sync').create(),
+    notifier = require('node-notifier');
+
+function onError (e) {
+	console.log(e.message);
+	notifier.notify({
+		title: 'stylus error',
+		message: e.message + e.filename
+	})
+}
 
 gulp.task("stylus", function(){
     return gulp.src("./stylus/main.styl")
-            .pipe(stylus({
-                use: [rupture()],
-                compress: true
-            }))
-            .pipe(gulp.dest("./css"))
-            .pipe(bs.stream());
+        .pipe(stylus({
+            use: [rupture()],
+            compress: true
+        }).on('error', onError))
+        .pipe(gulp.dest("./css"))
+        .pipe(bs.stream());
 });
 
 gulp.task('html', function () {
-  return gulp.src('./*.html')
-    .pipe(connect.reload());
+    return gulp.src('./*.html')
+        .pipe(bs.reload());
 });
 
 gulp.task('serve', ['stylus'], function(){
-  bs.init({
-    server: './'
-  });
-  gulp.watch('./*.{html,js}').on('change', bs.reload);
+    bs.init({
+        server: './'
+    });
+    gulp.watch('./*.{html,js}').on('change', bs.reload);
 });
 
 
 gulp.task('watch', function () {
-  gulp.watch(['./*.html'], ['html']);
-  gulp.watch('./stylus/**/*.styl', ['stylus']);
+    gulp.watch(['./*.html'], ['html']);
+    gulp.watch('./stylus/**/*.styl', ['stylus']);
 });
 
 gulp.task('default', ['watch', 'serve']);
