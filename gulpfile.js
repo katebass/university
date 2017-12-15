@@ -23,21 +23,16 @@ gulp.task("stylus", function(){
         .pipe(bs.stream());
 });
 
-gulp.task('html', function () {
-    return gulp.src('./*.html')
-        .pipe(bs.reload());
-});
 
 gulp.task('serve', ['stylus'], function(){
     bs.init({
         server: './'
     });
-    gulp.watch('./*.{html,js}').on('change', bs.reload);
 });
 
 
 gulp.task('watch', function () {
-    gulp.watch(['./*.html'], ['html']);
+    gulp.watch('./*.{html,js}').on('change', bs.reload);
     gulp.watch('./stylus/**/*.styl', ['stylus']);
 });
 
