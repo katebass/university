@@ -1,0 +1,106 @@
+body
+{
+	background-image: url(../img/pattern.svg);
+	background-size: cover;
+	font-family: 'PT Sans', sans-serif;
+	font-size: 18px;
+}
+
+#myCarousel img{
+	margin: auto;
+	width: 60%;
+	height: 400px;
+}
+
+.aaa{
+	border: 1px solid black;
+}
+
+.navbar-default{
+	background-color: rgba(255,255,255,0.5);
+}
+
+.navbar-default *:hover{
+	color: white;
+}
+
+.media img{
+	width: 300px !important;
+	height: 300px;
+	border: 20px solid transparent;
+	border-image: url(../img/pattern.svg) 30 round;
+	margin: 15px;
+
+}
+
+.media-heading{
+	font-size: 25px;
+	text-align: center;
+	font-weight: 1000;
+}
+
+@media screen and (max-width: 750px) {
+	#myCarousel img{
+		height: 200px;
+	}
+}
+
+
+footer {
+  /*background-image: url("../img/footer3.png");*/
+  background-size: cover;
+  background-color: rgba(255, 255, 255, .3); }
+  footer .footer-box {
+    text-align: center;
+    margin: 0 100px;
+    padding: 50px 0; }
+    footer .footer-box i {
+      font-size: 20px;
+      line-height: 50px;
+      background-color: white;
+      margin: 15px;
+      width: 50px;
+      height: 50px;
+      border-radius: 30px;
+      transition: 0.4s ease; }
+      footer .footer-box i:hover {
+        background-color: lightblue; }
+    footer .footer-box p {
+      margin-bottom: 12px; }
+    footer .footer-box-subscribe {
+      background-color: rgba(255, 255, 255, 0.3); }
+      footer .footer-box-subscribe p {
+        margin-top: 10px;
+        font-size: 20px; }
+      footer .footer-box-subscribe input {
+        border: 1px solid black;
+        border-radius: 20px;
+        height: 40px;
+        padding: 10px;
+        margin: 10px 10px 30px;
+        background-color: rgba(255, 255, 255, 0.6); }
+    footer .footer-box .adress {
+      margin-left: 20px;
+      padding-left: 10px;
+      line-height: 30px; }
+    footer .footer-box .ad-1 {
+      background-image: url("../img/32x32x29.png");
+      background-repeat: no-repeat; }
+    footer .footer-box .ad-2 {
+      background-image: url("../img/32x32x30.png");
+      background-repeat: no-repeat; }
+    footer .footer-box .ad-3 {
+      background-image: url("../img/32x32x31.png");
+      background-repeat: no-repeat; }
+
+.but{
+		height: 40px;
+		border-radius: 20px;
+		border: 2px solid lightpink ;
+		transition: .4s ease-out;
+		background-color: lightpink;
+		margin-bottom: 10px;
+}
+.but:hover{
+	background-color: rgba(0,0,0,0);
+}
