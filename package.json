@@ -1,19 +1,27 @@
 {
-  "name": "bootstrap",
+  "name": "university",
   "version": "1.0.0",
+  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kusamops/university.git"
+  },
   "author": "",
   "license": "ISC",
-  "devDependencies": {
+  "bugs": {
+    "url": "https://github.com/kusamops/university/issues"
+  },
+  "homepage": "https://github.com/kusamops/university#readme",
+  "dependencies": {
     "browser-sync": "^2.18.13",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^4.0.0",
     "gulp-connect": "^5.0.0",
     "gulp-stylus": "^2.6.0",
     "rupture": "^0.7.1"
-  },
-  "description": ""
+  }
 }

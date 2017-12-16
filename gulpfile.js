@@ -1,20 +1,24 @@
-var qulp = require('gulp'),
-	stylus = require('gulp-stylus'),
-	autoprefix = require('gulp-autoprefixer'),
-  bs = require('browser-sync').create();
+var gulp = require('gulp'),
+    stylus = require('gulp-stylus'),
+    autoprefix = require('gulp-autoprefixer'),
+    rupture = require('rupture'),
+    bs = require('browser-sync').create();
 
 gulp.task("stylus", function(){
-	return gulp.src("./stylus/main.styl")
-			.pipe(stylus())
-			.pipe(gulp.dest("./css"))
-			.pipe(bs.stream());
+    return gulp.src("./stylus/main.styl")
+            .pipe(stylus({
+                use: [rupture()],
+                compress: true
+            }))
+            .pipe(gulp.dest("./css"))
+            .pipe(bs.stream());
 });
 
 gulp.task('html', function () {
   return gulp.src('./*.html')
     .pipe(connect.reload());
 });
- 
+
 gulp.task('serve', ['stylus'], function(){
   bs.init({
     server: './'
@@ -27,5 +31,5 @@ gulp.task('watch', function () {
   gulp.watch(['./*.html'], ['html']);
   gulp.watch('./stylus/**/*.styl', ['stylus']);
 });
- 
-gulp.task('default', ['watch', 'serve']); 
+
+gulp.task('default', ['watch', 'serve']);
