@@ -1,11 +1,10 @@
 #myCarousel
-    img
+    /*img
         position relative
         margin auto
         width 60%
         height 400px
-        z-index 1
-    
+        z-index 1*/
     .img-background
         position absolute
         z-index 2
@@ -17,6 +16,18 @@
     .carousel-caption
         z-index 3
 
-+below(750px)
-    #myCarousel img
-        height 200px
+
+    .slider-img
+        min-width 100%
+        min-height 100%
+
+        &-container
+            position relative
+            height calc(100vh - 50px)
+            width 100vw
+            z-index 1
+            overflow hidden
+
+
+    .carousel-control
+        z-index 4

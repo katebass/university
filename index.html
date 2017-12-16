@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Flowers</title>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-	<link rel="stylesheet" href="css/main.css" href="">
+  <title>Flowers</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/main.css" href="">
   <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
 
 </head>
-<body>
+<body class ="home-body">
 
 <!-- navigational bar -->
 <nav class="navbar-default">
@@ -50,13 +50,16 @@
     <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
     <li data-target="#myCarousel" data-slide-to="1"></li>
     <li data-target="#myCarousel" data-slide-to="2"></li>
+    <li data-target="#myCarousel" data-slide-to="3"></li>
   </ol>
 
   <!-- Wrapper for slides -->
   <div class="carousel-inner">
-    <div class="item active">
-      <img src="img/1.jpg" alt="Chania">
-      <div class="img-background"></div>
+    <div class="item active" >
+      <div class="slider-img-container">
+        <img src="img/1.jpg" class="slider-img">
+      </div>
+      <div class="img-background""></div>
       <div class="carousel-caption">
         <h3>Katya</h3>
         <p>Consectetur adipisicing elit</p>
@@ -64,7 +67,9 @@
     </div>
 
     <div class="item">
-      <img src="img/2.jpg" alt="Chicago">
+      <div class="slider-img-container">
+        <img src="img/2.jpg" class="slider-img">
+      </div>
       <div class="img-background"></div>
       <div class="carousel-caption">
         <h3>Yarik</h3>
@@ -73,14 +78,27 @@
     </div>
 
     <div class="item">
-      <img src="img/3.jpg" alt="New York">
+      <div class="slider-img-container">
+        <img src="img/footer3.png" class="slider-img">
+      </div>
       <div class="img-background"></div>
       <div class="carousel-caption">
         <h3>Oscar</h3>
         <p>Excepteur sint occaecat</p>
       </div>
     </div>
-  </div>
+
+    <div class="item">
+      <div class="slider-img-container">
+        <img src="img/2.jpg" class="slider-img">
+      </div>
+      <div class="img-background"></div>
+      <div class="carousel-caption">
+        <h3>ANNA!</h3>
+        <p>HELLO</p>
+      </div>
+    </div>
+  </div> 
 
   <!-- Left and right controls -->
   <a class="left carousel-control" href="#myCarousel" data-slide="prev">
@@ -96,22 +114,22 @@
 <br><br>
 
 <div class="container">
-  <div class="media jumbotron">
-    <div class="media-left">
-        <img src="img/4.jpg" class="media-object" style="width:60px">
+  <div class="jumbotron home-item">
+    <div class="home-item-picture">
+        <img src="img/4.jpg">
     </div>
-    <div class="media-body">
-      <h4 class="media-heading">Flower 1</h4>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+    <div class="home-item-content">
+      <h3 class="home-item-title">Flower 1</h3>
+      <p class="home-item-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
       tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
       quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
       consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
       cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-      proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
     </div>
   </div>
 
-  <div class="media jumbotron">
+ <!--  <div class="media jumbotron">
     <div class="media-body">
       <h4 class="media-heading">Flower 2</h4>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
@@ -140,7 +158,7 @@
       proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
     </div>
   </div>
-</div>
+</div> -->
 
 <footer>
   <div class="footer-box container">
@@ -189,7 +207,10 @@
   <p class="text-center">2017 © Basova Kateryna</p>
 </section>
 
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <script src="js/main.js"></script>
 </body>
 </html>

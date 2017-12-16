@@ -32,7 +32,7 @@ gulp.task('serve', ['stylus'], function(){
 
 
 gulp.task('watch', function () {
-    gulp.watch('./*.{html,js}').on('change', bs.reload);
+    gulp.watch('./**/*.{html,js}').on('change', bs.reload);
     gulp.watch('./stylus/**/*.styl', ['stylus']);
 });
 
