@@ -1,3 +1,13 @@
+var nav = document.getElementsByClassName('navigation')[0];
+
+window.onscroll = function() {
+  var scrolled = window.pageYOffset || document.documentElement.scrollTop;
+  if(scrolled >= 100) nav.classList.remove('visibility-no');
+  else nav.classList.add('visibility-no');
+  console.log(scrolled + 'px');
+}
+
+
 // function changeSliderImage() {
 // 	var images = $('.slider-img');
 // 	if (window.innerHeight > window.innerWidth/2) {
