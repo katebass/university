@@ -1,10 +1,17 @@
 .navigation
-    background-color rgba(255,255,255,0.9)
+    background-color rgba(0, 0, 0, 0.6)
     position fixed
     width 100%
     z-index 10
-    transition .4s ease opacity
+    transition .4s ease background-color
 
-.visibility-no
-    opacity 0
-    disply none
+    .nav-text
+        font-weight 1000
+        color white important
+        transition .4s ease color
+    
+    .navbar-nav>.active>a
+        background-color pink
+
+.nav-white
+    background-color rgba(255, 255, 255, 0.9)
