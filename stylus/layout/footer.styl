@@ -6,27 +6,57 @@ footer
     .footer-box
         display flex
         flex-direction row
-        margin-top 20px
+        margin-top 20px  
+
+        +below($mobile-width)
+            flex-direction column
+
+            .footer-box
+                &-text
+                    width 100%
+
+                    i
+                        margin 20px
+
+        &-container 
+            display flex 
+            justify-content space-around
+
+            +below($mobile-width)
+                margin-bottom 20px
+
+            +below($extra-mobile-width)
+                flex-direction column
+                align-items center
         
         &-text
             width 40%
             margin-left 20px
-            text-align justify
+
+            p 
+                text-align justify
+
+            +below($tablet-width)
+                display none
 
             i
                 cursor pointer
-                font-size 20px
+                font-size 25px
                 text-align center
-                line-height 50px
+                line-height 40px
                 background-color white
-                margin 10px
-                width 50px
-                height 50px
+                width 40px
+                height 40px
                 border-radius 30px
+                margin 0 8px
                 transition 0.4s ease
 
                 &:hover
                     background-color lightblue
+
+        &-icons 
+            display flex
+            justify-content center
         
         &-list
             display flex
@@ -35,6 +65,20 @@ footer
             padding 0
             margin-left 20px
             cursor pointer
+
+            &:first-of-type 
+                margin-right 30px
+
+                +below($extra-mobile-width)
+                    margin-right 0
+
+            &-container 
+                display flex 
+
+                +below($extra-mobile-width)
+                    justify-content space-around
+                    width 100%
+
 
             li:hover
                 color rgb(255, 102, 102)
@@ -47,6 +91,15 @@ footer
 
         &-subscribe
             background-color rgba(255, 255, 255, 0.3)
+            display flex 
+            flex-direction column
+            align-items center
+            padding 10px 
+
+            +below($extra-mobile-width)
+                margin-bottom 20px
+                width 100%
+
 
             p
                 margin-top 10px
@@ -61,19 +114,4 @@ footer
                 background-color rgba(255, 255, 255, 0.6)
                 outline 0
 
-        +below(985px)
-            flex-direction column
-            align-items center
-            .footer-box
-                &-text
-                    width 100%
-                    i
-                        margin 20px
-
-                &-list
-                    flex-direction row
-                    align-items stretch
-
-                    li
-                        margin auto
-                        flex-grow 1
+      
