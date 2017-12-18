@@ -26,9 +26,13 @@
     &-item 
         display flex
 
-        &-picture 
+        &-picture:nth-child(odd)
             margin 60px 20px 0 0
 
+        &-picture:nth-child(even)
+            margin 60px 20px 20px
+
+        &-picture
             img 
                 width 200px
 
