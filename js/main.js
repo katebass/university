@@ -34,4 +34,4 @@ window.onscroll = function() {
   }
 }
 
-document.querySelector('#footer-date').innerHTML = (new Date())sgetFullYear();
+document.querySelector('#footer-date').innerHTML = (new Date()).getFullYear();
